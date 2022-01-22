@@ -22,7 +22,7 @@ Esse template diminui a burocracia de criar um server Node.js/Express, possuindo
 - eslint (airbnb base)
 - husky
 - nodemon
-- faker
+- faker-br
 
 ## Como usar?
 
@@ -36,7 +36,7 @@ Esse template diminui a burocracia de criar um server Node.js/Express, possuindo
 
 5 - De um ```npx husky install```
 
-6 - Dẽ um ```npm run start:dev```
+6 - De um ```npm run start:dev```
 
 7- Opcionalmente, adicione os detalhes do seu projeto no package.json (nome, url, etc)
 
