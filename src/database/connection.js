@@ -1,4 +1,4 @@
-import './setup.js';
+import '../setup.js';
 import pg from 'pg';
 
 const { Pool } = pg;
@@ -6,9 +6,9 @@ const { Pool } = pg;
 let config = {
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
-  port: parseInt(process.env.DB_PORT, 10),
+  port: process.env.DB_PORT,
   host: process.env.DB_HOST,
-  database: process.env.DB_DATABASE,
+  database: process.env.DB_NAME,
 };
 
 if (process.env.NODE_ENV === 'prod') {
@@ -20,6 +20,6 @@ if (process.env.NODE_ENV === 'prod') {
   };
 }
 
-const pool = new Pool(config);
+const connection = new Pool(config);
 
-export default pool;
+export default connection;
